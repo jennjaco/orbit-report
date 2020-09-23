@@ -8,9 +8,20 @@ import { Satellite } from '../satellite';
 })
 export class OrbitListComponent implements OnInit {
 @Input() satellites: Satellite[];
+
   constructor() { }
 
   ngOnInit() {
+  }
+  sort(column: string): void {
+    this.satellites.sort(function(a: Satellite, b: Satellite): number {
+      if(a[column] < b[column]) {
+        return -1;
+      } else if (a[column] > b[column]) {
+        return 1;
+      }
+      return 0;
+    });
   }
 
 }
