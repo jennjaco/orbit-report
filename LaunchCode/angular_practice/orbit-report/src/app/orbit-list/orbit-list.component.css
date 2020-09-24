@@ -17,8 +17,12 @@ table {
 }
 
 .header-row {
-    background: #34495E;
+    background: #3b6186;
     color: #fff
+}
+
+table tr:nth-of-type(even){
+    background: rgba(84, 202, 119, 0.678);
 }
 
 th, td {
